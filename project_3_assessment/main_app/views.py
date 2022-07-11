@@ -7,6 +7,12 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'home.html')
 
+def add(request):
+    print("thank you for submitting a widget")
+    return render(request, 'home.html')
+
 def delete(request):
-  return HttpResponse('<h1>Are you sure you want to delete this Widget?</h1>')
+    return render(request, 'delete.html')
+
+
 
