@@ -10,7 +10,8 @@ from .models import Widget
 
 # Define the home view
 def home(request): #,widgets
-    return render(request, 'home.html' )
+    widget = {"widgets_list" : Widget.objects.all()}
+    return render(request, 'home.html', widget )
     #, { 'widgets' : widgets }
 
 def add(request):
