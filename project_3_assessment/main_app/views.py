@@ -22,8 +22,8 @@ def add(request):
     print(added_widget)
     added_widget.save()
     print('this is printing near the end')
-    return render(request, 'home.html' )
-    # return redirect('home.html')
+    #Return render(request, 'home.html' )
+    return redirect('/')
 
   
 
