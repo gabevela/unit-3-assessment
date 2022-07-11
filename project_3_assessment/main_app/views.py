@@ -17,7 +17,7 @@ def add(request):
 
     print("thank you for submitting a widgetttt ----------- ")
     
-    added_widget = Widget(description = request.POST['description'])
+    added_widget = Widget(description = request.POST['description'], quantity = request.POST['quantity'])
     print(added_widget)
     added_widget.save()
     print('this is printing near the end')
