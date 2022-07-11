@@ -18,23 +18,30 @@
         <div class="card-content">
             <span class="card-title">{{ widget.description }}</span>
             <p>Description: {{ widget.description }}</p>
-            
+
         </div>
     </div>
     {% endfor %}
     <hr />
     <h2>Add Widget</h2>
-    <form method="POST" action="/add" enctype="multipart/form-data">
-        <label for="widget"> Description: </label>
-        <input name="widget" placeholder=" " />
-        <br>
-        <br>
-        <label for="quantity"> Quantity: </label>
-        <input name="quantity" placeholder=" " />
-        <br>
-        <br>
-        <button type="submit">Add Widget</button>
-    </form>
+    <div>
+        <form autocomplete="off"  action="{% url 'add_widget' %}" method="POST" >
+            {% csrf_token %}
+<!-- 
+            <label for="id"> DB id : </label>
+            <input type="digit" name="id" placeholder="1" />
+            <br> -->
+            <label for="description"> Description: </label>
+            <input type="text" name="description" placeholder="" />
+            <br>
+            <br>
+            <label for="quantity"> Quantity: </label>
+            <input type="textr" name="quantity" placeholder="" />
+            <br>
+            <br>
+            <button type="submit">Add Widget</button>
+        </form>
+    </div>
 
 </body>
 
