@@ -1,24 +1,29 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-
     <title>Project 3 Assessment</title>
 </head>
-
 <body>
     <h1>Wacky Widgets</h1>
     <hr />
-    <p>Add Widget</p>
-    <a href="/add">Add</a>
-    
+    <h2>Add Widget</h2>
+    <form method="POST" action="/add" enctype="multipart/form-data">
+        <label for="widget"> Description: </label>
+        <input name="widget" placeholder=" " />
+        <br>
+        <br>
+        <label for="quantity"> Quantity: </label>
+        <input name="quantity" placeholder=" " />
+        <br>
+        <br>
+        <button type="submit">Add Widget</button>
+    </form>
 
 </body>
 
