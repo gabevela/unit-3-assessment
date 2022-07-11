@@ -16,6 +16,3 @@ def add(request):
 
 def delete(request):
     return render(request, 'delete.html')
-
-
-
