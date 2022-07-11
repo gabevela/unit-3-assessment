@@ -5,11 +5,10 @@ from django.http import HttpResponse
 
 # Define the home view
 def home(request): #,widgets
-    return render(request, 'home.html')
 
-# , {'widgets': widgets }
+    return render(request, 'home.html' )
 
-
+#, { 'widgets' : widgets }
 
 def add(request):
     print("thank you for submitting a widget")

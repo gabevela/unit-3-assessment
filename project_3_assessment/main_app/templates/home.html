@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,18 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>Project 3 Assessment</title>
 </head>
+
 <body>
     <h1>Wacky Widgets</h1>
+    {% for widget in widgets %}
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ widget.description }}</span>
+            <p>Description: {{ widget.description }}</p>
+            
+        </div>
+    </div>
+    {% endfor %}
     <hr />
     <h2>Add Widget</h2>
     <form method="POST" action="/add" enctype="multipart/form-data">
