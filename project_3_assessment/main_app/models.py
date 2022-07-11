@@ -2,12 +2,16 @@ from django.db import models
 from django.urls import reverse
 
 # Create your models here.
-class Widget:  # Note that parens are optional if not inheriting from another class
-  def __init__(self, description, quantity):
+class Widget(models.Model):  # Note that parens are optional if not inheriting from another class
+    description = models.TextField()
+    quantity = models.IntegerField()
     
-    self.description = description
-    self.quantity = quantity
 
-widgets = [
-  Widget('THIS IS THE DESCRIPTION', 4)
-]
+#   def __init__(self, description, quantity):
+    
+#     self.description = description
+#     self.quantity = quantity
+
+# widgets = [
+#   Widget('THIS IS THE DESCRIPTION', 4)
+# ]
