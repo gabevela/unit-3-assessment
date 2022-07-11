@@ -18,9 +18,16 @@
         <div class="card-content">
             <p>Description: {{ widget.description }}</p>
             <p>Quantity: {{ widget.quantity }}</p>
+            <form action="{% url 'delete_widget' widget.id  %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" > DELETE</button>
+
+            </form>
             <p>-------------------------------</p>
-            
+
         </div>
+        {% empty %}
+        <p>THERE ARE NO WIDGETS IN THE LIST! :( </p>
     </div>
     {% endfor %}
     <hr />

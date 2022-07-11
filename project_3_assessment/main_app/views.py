@@ -25,15 +25,10 @@ def add(request):
     #Return render(request, 'home.html' )
     return redirect('/')
 
-  
+def delete(request, widget_id):
+    widget_delete = Widget.objects.get(id = widget_id )
+    widget_delete.delete()
+    return redirect('/')
 
+    #return render(request, 'delete.html')
 
-
-def delete(request):
-    return render(request, 'delete.html')
-
-
-
-# mywidget = Widget.objects.create(widget = request.POST['widget'],
-#                             quantity = request.POST['quantity']                          
-#                             )
